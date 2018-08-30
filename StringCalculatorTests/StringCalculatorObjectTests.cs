@@ -33,9 +33,9 @@ namespace StringCalculator.Tests
         public void TestDelimiterIsNumericNotEndNewLine()
         {
             StringCalculatorObject string_cal = new StringCalculatorObject();
-            string radom_string = "1\n1;2";
+            string radom_string = "1\n2,3";
             string result = string_cal.Add(radom_string);
-            Assert.AreEqual("The total is 6", result);
+            Assert.AreEqual("The total is = 6", result);
         }
     }
 }
