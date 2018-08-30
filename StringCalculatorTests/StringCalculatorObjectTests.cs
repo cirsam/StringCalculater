@@ -37,5 +37,43 @@ namespace StringCalculator.Tests
             string result = string_cal.Add(radom_string);
             Assert.AreEqual("The total is = 6", result);
         }
+
+        [TestMethod()]
+        public void TesttIgnoregreaterthan1000()
+        {
+            StringCalculatorObject string_cal = new StringCalculatorObject();
+            string radom_string = "1\n2,3,1000";
+            string result = string_cal.Add(radom_string);
+            Assert.AreEqual("The total is = 6", result);
+        }
+
+        [TestMethod()]
+        public void TestNegativeNotAllowed()
+        {
+            StringCalculatorObject string_cal = new StringCalculatorObject();
+            string radom_string = "1\n-2,-3,1000";
+            string result = string_cal.Add(radom_string);
+            Assert.AreEqual("The total is = 1 and -2 -3  are not allowed", result);
+        }
+
+        [TestMethod()]
+        public void TestDelimiterIsNotNumericNotEndNewLine()
+        {
+            StringCalculatorObject string_cal = new StringCalculatorObject();
+            string radom_string = "//;\n1;2";
+            string result = string_cal.Add(radom_string);
+            Assert.AreEqual("The total is = 6", result);
+        }
+
+        [TestMethod()]
+        public void TestMultipleDelimiter()
+        {
+            StringCalculatorObject string_cal = new StringCalculatorObject();
+            string radom_string = "//[*][%]\n1*2%3";
+            string result = string_cal.Add(radom_string);
+            Assert.AreEqual("The total is = 6", result);
+        }
+
+
     }
 }
