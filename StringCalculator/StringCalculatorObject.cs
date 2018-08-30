@@ -8,7 +8,7 @@ namespace StringCalculator
 {
     public class StringCalculatorObject
     {
-        public string Add()
+        public string Add(string somestring)
         {
             return "";
         }

@@ -12,11 +12,31 @@ namespace StringCalculator.Tests
     public class StringCalculatorObjectTests
     {
         [TestMethod()]
-        public void AddTest()
+        public void TestEmptyString()
         {
-            Assert.Fail();
+            StringCalculatorObject string_cal = new StringCalculatorObject();
+            string radom_string = "";
+            string result = string_cal.Add(radom_string);
+            Assert.AreEqual("0",result);
+        }
+
+        [TestMethod()]
+        public void TestDelimiterIsNumericEndNewLine()
+        {
+            StringCalculatorObject string_cal = new StringCalculatorObject();
+            string radom_string = "";
+            string result = string_cal.Add(radom_string);
+            Assert.AreEqual("Not ok",result);
         }
 
 
+        [TestMethod()]
+        public void TestDelimiterIsNumericNotEndNewLine()
+        {
+            StringCalculatorObject string_cal = new StringCalculatorObject();
+            string radom_string = "";
+            string result = string_cal.Add(radom_string);
+            Assert.AreEqual("The total is 6", result);
+        }
     }
 }
