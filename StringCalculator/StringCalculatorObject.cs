@@ -10,6 +10,19 @@ namespace StringCalculator
     {
         public string Add(string somestring)
         {
+            if (string.IsNullOrEmpty(somestring))
+            {
+                return "0";
+            }
+
+
+            string numbers = somestring.Split('\n')[1];
+
+            if (string.IsNullOrEmpty(numbers))
+            {
+                return "Not ok";
+            }
+
             return "";
         }
     }

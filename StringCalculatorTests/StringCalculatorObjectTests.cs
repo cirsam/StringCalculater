@@ -24,17 +24,16 @@ namespace StringCalculator.Tests
         public void TestDelimiterIsNumericEndNewLine()
         {
             StringCalculatorObject string_cal = new StringCalculatorObject();
-            string radom_string = "";
+            string radom_string = "1\n";
             string result = string_cal.Add(radom_string);
             Assert.AreEqual("Not ok",result);
         }
-
 
         [TestMethod()]
         public void TestDelimiterIsNumericNotEndNewLine()
         {
             StringCalculatorObject string_cal = new StringCalculatorObject();
-            string radom_string = "";
+            string radom_string = "1\n1;2";
             string result = string_cal.Add(radom_string);
             Assert.AreEqual("The total is 6", result);
         }
