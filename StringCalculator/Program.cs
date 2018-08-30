@@ -10,7 +10,15 @@ namespace StringCalculator
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            StringCalculatorObject stringCal = new StringCalculatorObject();
+            Console.WriteLine(stringCal.Add(""));
+            Console.WriteLine(stringCal.Add("1\n2,3"));
+            Console.WriteLine(stringCal.Add("1\n-2,-3,1000"));
+            Console.WriteLine(stringCal.Add("1,\n"));
+            Console.WriteLine(stringCal.Add("//;\n1;2"));
+            Console.WriteLine(stringCal.Add("//[*][%]\n1*2%3"));
+            Console.WriteLine(stringCal.Add("//[*][%]\n1*2%-3,1000"));
+            Console.WriteLine(stringCal.Add("//[****][*%]\n1****2%%-3,1000"));
             Console.ReadKey();
         }
     }
