@@ -69,7 +69,18 @@ namespace StringCalculator
             }
             else
             {
-                //do if the delimiter is non numberic
+                if (!string.IsNullOrEmpty(stringBuild.ToString()))
+                {
+
+                    results = string.Format("The total is = {0} and {1} are not allowed", (total).ToString(), stringBuild);
+
+                }
+                else
+                {
+
+                    results = string.Format("The total is = {0}", (total).ToString());
+
+                }
             }
 
             return results;

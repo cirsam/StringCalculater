@@ -62,7 +62,7 @@ namespace StringCalculator.Tests
             StringCalculatorObject string_cal = new StringCalculatorObject();
             string radom_string = "//;\n1;2";
             string result = string_cal.Add(radom_string);
-            Assert.AreEqual("The total is = 6", result);
+            Assert.AreEqual("The total is = 3", result);
         }
 
         [TestMethod()]
